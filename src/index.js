@@ -1,6 +1,6 @@
 import { registerImage } from "./lazyLoading";
 
-const max = 122;
+const max = 739;
 const min = 1;
 const random = () => Math.floor(Math.random() * (max - min) + min);
 
@@ -11,7 +11,7 @@ const createImageNode = () => {
     const image = document.createElement('img');
     image.className = 'mx-auto';
     image.width = '320';
-    image.src = `https://randomfox.ca/images/${random()}.jpg`;  
+    image.dataset.src = `https://api.capy.lol/v1/capybara/${random()}` 
 
     container.appendChild(image);
     return container;
