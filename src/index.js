@@ -1,3 +1,5 @@
+import { registerImage } from "./lazyLoading";
+
 const max = 122;
 const min = 1;
 const random = () => Math.floor(Math.random() * (max - min) + min);
@@ -22,6 +24,7 @@ const addButton = document.querySelector('button');
 const addImage = () => {
     const newImage = createImageNode();
     mountNode.append(newImage);
+    registerImage(newImage);
 };
 
 addButton.addEventListener("click", addImage);
