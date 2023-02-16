@@ -6,10 +6,10 @@ const random = () => Math.floor(Math.random() * (max - min) + min);
 
 const createImageNode = () => {
     const container = document.createElement('div');
-    container.className = 'p-4' 
+    container.className = 'p-4 flex items-center' 
 
     const image = document.createElement('img');
-    image.className = 'mx-auto';
+    image.className = 'mx-auto rounded';
     image.width = '320';
     image.dataset.src = `https://api.capy.lol/v1/capybara/${random()}` 
 
